@@ -1,0 +1,23 @@
+/* src/components/DomainSection.module.css */
+.section {
+	background-color: var(--canvas-color);
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+	padding: 1rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	box-sizing: border-box;
+}
+.title {
+	margin: 0 0 1rem 0;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text-medium);
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: 0.5rem;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}

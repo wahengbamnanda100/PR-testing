@@ -1,0 +1,27 @@
+/* src/components/ServiceItem.module.css */
+.item {
+	background-color: var(--item-color);
+	color: var(--text-dark);
+	border-radius: var(--border-radius);
+	padding: 0.5rem;
+	text-align: center;
+	font-size: 0.8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.2s, transform 0.2s;
+	cursor: pointer;
+	min-height: 50px;
+}
+.item:hover {
+	background-color: var(--item-hover-color);
+	transform: translateY(-2px);
+}
+.label {
+	font-size: 0.65rem;
+	opacity: 0.8;
+}
+.name {
+	font-weight: 600;
+}

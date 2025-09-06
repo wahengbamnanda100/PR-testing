@@ -1,0 +1,253 @@
+@import "tailwindcss";
+:root {
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	/* background-color: #242424; */
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--font-sans: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+	--bg-color: #0f172a; /* Slate 900 */
+	--canvas-color: #1e293b; /* Slate 800 */
+	--subgroup-color: #0d9488; /* Teal 600 */
+	--item-color: #f59e0b; /* Amber 500 */
+	--item-hover-color: #fbbd23; /* Amber 400 */
+
+	--text-light: #f8fafc; /* Slate 50 */
+	--text-medium: #94a3b8; /* Slate 400 */
+	--text-dark: #1e293b; /* Slate 800 */
+
+	--border-color: #334155; /* Slate 700 */
+	--border-radius: 6px;
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	margin: 0;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+}
+
+button {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+button:hover {
+	border-color: #646cff;
+}
+/* button:focus, */
+/* button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+} */
+
+.react-transform-wrapper {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.react-transform-component {
+	width: max-content !important;
+	height: max-content !important;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.rect:hover {
+	cursor: pointer;
+	stroke: rgb(229, 143, 153);
+	strokewidth: 3;
+}
+
+.child-rect:hover {
+	cursor: pointer;
+}
+
+.child-child-rect {
+	z-index: 1000;
+	stroke: red;
+}
+
+.child-child-rect:hover {
+	cursor: pointer;
+	stroke: rgb(19, 135, 161);
+	strokewidth: 3;
+}
+
+.SplitPane {
+	position: relative !important;
+}
+.Pane1,
+.Pane2 {
+	overflow: auto;
+}
+.Resizer {
+	background: #ddd;
+	width: 4px;
+	cursor: col-resize;
+	transition: background 0.2s ease;
+}
+.Resizer:hover {
+	background: #aaa;
+}
+
+/* Add this to your global CSS file, e.g., App.css or index.css */
+.ResizeHandleOuter {
+	width: 10px; /* Draggable area width */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f0f0f0; /* Optional: background for the handle area itself */
+	cursor: col-resize;
+	position: relative; /* If needed for z-index or advanced styling */
+}
+
+.ResizeHandleInner {
+	width: 4px; /* Visible bar width */
+	height: 40px; /* Visible bar height */
+	background-color: #cccccc; /* Bar color */
+	border-radius: 3px;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.ResizeHandleOuter[data-resize-handle-active] .ResizeHandleInner {
+	background-color: #007bff; /* Active dragging color (e.g., MUI primary blue) */
+}
+
+/* Ensure PanelGroup takes full height/width of its container if Box in FolderView doesn't do it*/
+[data-panel-group] {
+	height: 100% !important;
+	width: 100% !important;
+}
+[data-panel] {
+	overflow: hidden; /* Let inner Box components with overflowY: 'auto' handle scrolling */
+}
+
+/* Basic body/html setup if not already present */
+/*
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent double scrollbars */
+/* }
+*/
+
+::-webkit-scrollbar {
+	width: 6px; /* Smaller width */
+	height: 6px; /* Smaller height for horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+	background: rgb(137, 134, 134); /* Dark scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(137, 134, 134); /* White scrollbar */
+	border-radius: 4px;
+	border: 1px solid transparent;
+}
+
+/* Optional: Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgb(137, 134, 134) transparent;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
+}
+
+/* Keyframes for hover animations */
+@keyframes layoutItemPulse {
+	0% { opacity: 0.6; }
+	50% { opacity: 1; }
+	100% { opacity: 0.6; }
+}
+
+@keyframes layoutItemGlow {
+	0% { box-shadow: 0 0 5px rgba(66, 165, 245, 0.3); }
+	50% { box-shadow: 0 0 20px rgba(66, 165, 245, 0.6); }
+	100% { box-shadow: 0 0 5px rgba(66, 165, 245, 0.3); }
+}
+
+/* src/App.css */
+.app-container-land {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.header {
+	padding: 1rem 1.5rem;
+	background-color: var(--canvas-color);
+	border-bottom: 1px solid var(--border-color);
+	flex-shrink: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header h1 {
+	font-size: 1.25rem;
+	margin: 0;
+	font-weight: 600;
+}
+
+.controls button {
+	background-color: #334155;
+	color: var(--text-light);
+	border: 1px solid #475569;
+	padding: 0.5rem 1rem;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	margin-left: 0.5rem;
+	font-weight: 500;
+	transition: background-color 0.2s;
+}
+
+.controls button:hover {
+	background-color: #475569;
+}
+
+.main-content {
+	flex-grow: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}

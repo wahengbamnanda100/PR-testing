@@ -1,0 +1,18 @@
+/* src/components/SubDomainGroup.module.css */
+.group {
+	background-color: var(--subgroup-color);
+	padding: 1rem;
+	border-radius: var(--border-radius);
+}
+.title {
+	margin: 0 0 1rem 0;
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--text-light);
+	text-align: center;
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.5rem;
+}

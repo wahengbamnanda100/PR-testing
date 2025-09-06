@@ -1,0 +1,15 @@
+/* src/components/ServiceDomainCanvas.module.css */
+.canvas {
+	display: flex;
+	gap: 1.5rem;
+	padding: 2rem;
+	align-items: flex-start;
+	/* background: red; */
+	min-width: fit-content; /* Important for zooming */
+}
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	width: 320px; /* Set a fixed width for columns */
+}
